@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+}
+
+img,
+button {
+    display: block;
+    margin: 20px auto;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.active {
+    background-color: black;
+    border: white;
+    color: white;
+}
