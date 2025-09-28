@@ -9,7 +9,7 @@ const mainElem = document.querySelector("main");
 
 /**
  * Creare una funzione che, al click del bottone
- *      se l'innerHTML del button è uguale a "Accendi", allora al click l'immagine e l'innerHTML cambiano in funzione della lampadina accesa;
+ *      se l'innerHTML del button è uguale a "Accendi", allora al click l'immagine (src + alt) e l'innerHTML cambiano in funzione della lampadina accesa;
  *      altrimenti se l'innerHTML del bottone è uguale a "Spegni", cambiano tornando allo stato iniziale
  */
 
@@ -17,11 +17,13 @@ switchButtonElem.addEventListener("click", function () {
     if (switchButtonElem.innerHTML === "Accendi") {
         switchButtonElem.innerHTML = "Spegni";
         lampImgElem.src = "./img/yellow_lamp.png";
+        lampImgElem.alt = "Lamp turned on";
         switchButtonElem.classList.add("active");
         mainElem.style.backgroundColor = "rgb(255, 255, 150)";
     } else if (switchButtonElem.innerHTML === "Spegni") {
         switchButtonElem.innerHTML = "Accendi";
         lampImgElem.src = "./img/white_lamp.png";
+        lampImgElem.alt = "Lamp turned off";
         switchButtonElem.classList.remove("active");
         mainElem.style.backgroundColor = "black";
     }
