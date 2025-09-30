@@ -23,7 +23,7 @@ button {
     border-radius: 10px;
 }
 
-.active {
+.on {
     background-color: black;
     border: white;
     color: white;

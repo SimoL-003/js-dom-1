@@ -14,17 +14,16 @@ const mainElem = document.querySelector("main");
  */
 
 switchButtonElem.addEventListener("click", function () {
-    if (switchButtonElem.innerHTML === "Accendi") {
+    switchButtonElem.classList.toggle("on");
+    if (switchButtonElem.classList.contains("on")) {
         switchButtonElem.innerHTML = "Spegni";
         lampImgElem.src = "./img/yellow_lamp.png";
         lampImgElem.alt = "Lamp turned on";
-        switchButtonElem.classList.add("active");
         mainElem.style.backgroundColor = "rgb(255, 255, 150)";
-    } else if (switchButtonElem.innerHTML === "Spegni") {
+    } else {
         switchButtonElem.innerHTML = "Accendi";
         lampImgElem.src = "./img/white_lamp.png";
         lampImgElem.alt = "Lamp turned off";
-        switchButtonElem.classList.remove("active");
         mainElem.style.backgroundColor = "black";
     }
 })
